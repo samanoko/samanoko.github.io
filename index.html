@@ -19,17 +19,35 @@
       color: #111;
       height: 100vh;
       display: flex;
-      flex-direction: column;
       align-items: center;
       justify-content: center;
     }
 
-    h1 {
+    .box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    .name {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    h1, h2 {
       font-size: 1rem;
       font-weight: 700;
       letter-spacing: 0.15em;
       text-transform: uppercase;
-      margin-bottom: 2.5rem;
+      margin: 0;
+    }
+
+    h2 {
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
     }
 
     .links {
@@ -38,7 +56,7 @@
     }
 
     a {
-      font-size: 0.85rem;
+      font-size: 0.75rem;
       font-weight: 700;
       letter-spacing: 0.12em;
       text-transform: uppercase;
@@ -53,10 +71,15 @@
   </style>
 </head>
 <body>
-  <h1>Šimon Očkáš — Graphic Designer</h1>
-  <div class="links">
-    <a href="/portfolio_sk.pdf">SK / CZ</a>
-    <a href="/portfolio_en.pdf">EN</a>
+  <div class="box">
+    <div class="name">
+      <h1>Simon Ockas</h1>
+      <h2>Graphic Designer</h2>
+    </div>
+    <div class="links">
+      <a href="/portfolio_sk.pdf">CZ / SK</a>
+      <a href="/portfolio_en.pdf">EN</a>
+    </div>
   </div>
 </body>
 </html>
