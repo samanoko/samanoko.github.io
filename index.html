@@ -7,6 +7,13 @@
   <title>Šimon Očkáš — Graphic Designer</title>
   <link rel="icon" href="/favicon.ico">
   <style>
+    /* 1. Define color variables */
+    :root {
+      --bg-color: #ffffff;
+      --text-color: #111111;
+    }
+  
+    /* 2. Fonts */
     @font-face {
       font-family: 'Monument Extended';
       src: url('/MonumentExtended-Ultrabold.woff2') format('woff2');
@@ -22,19 +29,21 @@
       src: url('/Nohemi-SemiBold.woff2') format('woff2');
       font-weight: 600;
     }
-
+  
+    /* 3. Reset */
     * { margin: 0; padding: 0; box-sizing: border-box; }
-
+  
+    /* 4. Body */
     body {
-      background: #ffffff;
-      color: #111;
+      background: var(--bg-color);
+      color: var(--text-color);
       width: 100%;
       min-height: 100vh;
       position: relative;
       overflow: hidden;
     }
-
-    /* Corner labels */
+  
+    /* 5. Corner labels */
     .corner {
       position: fixed;
       font-family: 'Nohemi', 'Helvetica Neue', Arial, sans-serif;
@@ -43,14 +52,10 @@
       letter-spacing: 0.1em;
       text-transform: uppercase;
       line-height: 1;
-      color: #111;
+      color: var(--text-color);
     }
-    .corner-tl { top: 10px; left: 10px; }
-    .corner-tr { top: 10px; right: 10px; }
-    .corner-bl { bottom: 10px; left: 10px; }
-    .corner-br { bottom: 10px; right: 10px; }
-
-    /* Center block */
+  
+    /* 6. Center block */
     .center {
       position: fixed;
       top: 50%;
@@ -63,7 +68,7 @@
       width: 100%;
       padding: 0 20px;
     }
-
+  
     .subtitle {
       font-family: 'Nohemi', 'Helvetica Neue', Arial, sans-serif;
       font-weight: 500;
@@ -71,9 +76,9 @@
       letter-spacing: 0.1em;
       text-transform: uppercase;
       text-align: center;
-      color: #111;
+      color: var(--text-color);
     }
-
+  
     h1 {
       font-family: 'Monument Extended', 'Helvetica Neue', Arial, sans-serif;
       font-weight: 700;
@@ -82,19 +87,13 @@
       letter-spacing: 0.02em;
       text-transform: uppercase;
       text-align: center;
-      color: #111;
+      color: var(--text-color);
     }
-
+  
     h1 span { display: inline; }
     h1 .space { display: inline; }
-
-    /* Language buttons */
-    .links {
-      display: flex;
-      align-items: center;
-      gap: 2.5rem;
-    }
-
+  
+    /* 7. Language buttons */
     .lang-btn {
       font-family: 'Monument Extended', 'Helvetica Neue', Arial, sans-serif;
       font-weight: 700;
@@ -102,23 +101,22 @@
       letter-spacing: 0.1em;
       text-transform: uppercase;
       text-align: center;
-      color: #111;
-      text-decoration: none;
-      border: 2px solid #111;
+      color: var(--text-color);
+      border: 2px solid var(--text-color);
       border-radius: 9999px;
       padding: 0.55rem 1.1rem;
-      transition: opacity 0.2s;
-      white-space: nowrap;
       cursor: pointer;
+      text-decoration: none;
+      transition: opacity 0.2s;
     }
-
+  
     .lang-btn:hover { opacity: 0.4; }
     .lang-btn.active {
-      background: #111;
-      color: #fff;
+      background: var(--text-color);
+      color: var(--bg-color);
     }
-
-    /* Mobile */
+  
+    /* 8. Mobile */
     @media (max-width: 600px) {
       h1 { font-size: 4.2rem; line-height: 1; }
       h1 span { display: block; }
@@ -126,6 +124,14 @@
       .subtitle { font-size: 1rem; }
       .lang-btn { font-size: 1.4rem; }
       .center { gap: 16px; }
+    }
+  
+    /* 9. Optional dark mode */
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg-color: #111111;
+        --text-color: #eeeeee;
+      }
     }
   </style>
 </head>
