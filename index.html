@@ -45,12 +45,20 @@
     cursor: url('/hand-cursor-default.png') 13 4, auto;
   }
   
-  a,
-  button,
-  .lang-btn,
-  .links * {
-    cursor: url('/hand-cursor-pointer.png') 13 4, pointer;
-  }
+      a,
+    button,
+    .lang-btn,
+    .links * {
+      cursor: url('/hand-cursor-pointer.png') 13 4, pointer;
+    }
+    
+    /* Make sure hover doesn’t override it */
+    a:hover,
+    button:hover,
+    .lang-btn:hover,
+    .links *:hover {
+      cursor: url('/hand-cursor-pointer.png') 13 4, pointer;
+    }
   
     /* 5. Corner labels */
     .corner {
